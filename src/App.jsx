@@ -3,6 +3,7 @@ import React from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 function App() {
@@ -10,8 +11,21 @@ function App() {
 
   return (
     <>
+      <BrowserRouter>
+
+
       <NavBar/>
-      <ItemListContainer greeting={"Bienvenidos a mi Ecommerce"}/>
+
+      <Routes>
+
+        <Route path='/' element={<ItemListContainer/>}/>
+
+        <Route path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
+
+      </Routes>
+
+
+      </BrowserRouter>
     </>
   )
 }

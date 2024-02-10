@@ -2,12 +2,13 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import './NavBar.css'
 
 const NavBar = () => {
     return (
 
 
-        <>
+        <div className='container'>
         
         <h1>REGAHARD</h1>
 
@@ -21,10 +22,12 @@ const NavBar = () => {
             <li><a href="">Contacto</a></li>
         </ul>
         
+        <div className='cartWidget'>
+            <CartWidget/>
+        </div>
         
-        <CartWidget/>
 
-        </>
+        </div>
 
 
     )
