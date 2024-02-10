@@ -1,6 +1,7 @@
 .container{
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    margin: 20px 40px;
 }
 
 ul{
@@ -10,7 +11,7 @@ ul{
     list-style: none;
 }
 
-.cartWidget, h1{
+.cartWidget, h1, .logo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +19,13 @@ ul{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 .active{
     color: red;
+}
+
+.logoImg{
+    width: 90%;
 }

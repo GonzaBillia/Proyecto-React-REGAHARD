@@ -1,15 +1,10 @@
-.card{
-    width: 300px;
+.itemDetail{
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 30px;
     padding: 20px;
-    border: 1px solid black;
-    border-radius: 15px;
-}
 
-.cardImg{
-    width: 250px;
 }

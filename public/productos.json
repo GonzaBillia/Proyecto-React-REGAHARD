@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "tipoItem": "Micropocesador",
+        "tipoItem": "Microprocesador",
         "marca": "AMD",
         "modelo": "Ryzen 3 3200G",
         "precio": 89000,
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "tipoItem": "Micropocesador",
+        "tipoItem": "Microprocesador",
         "marca": "AMD",
         "modelo": "Ryzen 5 5600G",
         "precio": 126000,
@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "tipoItem": "Micropocesador",
+        "tipoItem": "Microprocesador",
         "marca": "AMD",
         "modelo": "Ryzen 7 5700G",
         "precio": 189000,

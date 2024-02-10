@@ -1,0 +1,18 @@
+.itemCount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.boton{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton p{
+    margin: 15px;
+}
