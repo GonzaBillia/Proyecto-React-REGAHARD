@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import {Link} from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import Cart from '../Cart/Cart'
 
 const ItemDetail = ({producto}) => {
 
@@ -13,8 +14,9 @@ const ItemDetail = ({producto}) => {
     const agregar = (count) =>{
         setCart(true)
 
-        agregarAlCarrito(producto, count)
-        console.log(count)
+        producto.cantidad = count
+        
+        agregarAlCarrito(producto)
     }
 
     return (
@@ -25,7 +27,13 @@ const ItemDetail = ({producto}) => {
             <h4>Precio: ${producto.precio}</h4>
             <p>Categoria: {producto.tipoItem}</p>
 
-            {cart ? <Link to= '/cart'><button>Ir al Carrito</button></Link> : <ItemCount initial={1} stock={producto.stock} agregar={agregar}/>}
+            {cart ? 
+            <>
+                <Link to= '/cart'><button>Ir al Carrito</button></Link>
+                
+            </>
+            : 
+            <ItemCount initial={1} stock={producto.stock} agregar={agregar}/>}
 
             
 

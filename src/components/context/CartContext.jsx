@@ -4,16 +4,22 @@ import React, {createContext, useState} from "react"
 export const CartContext = createContext()
 
 const CartProvider = ({children}) =>{
-
-    const [cart, setCart] = useState([])
+    const arrayInicial = []
+    const [cart, setCart] = useState(arrayInicial)
     const [total, setTotal] = useState(0)
     const [totalProductos, setTotalProductos] = useState(0)
 
 
-    const agregarAlCarrito = (producto, cantidad) => {
-        console.log(producto)
-        console.log(cantidad)
-        setTotalProductos(cantidad)
+    const agregarAlCarrito = (producto) => {
+        if(cart.length == 0){
+            arrayInicial.push(producto)
+            setCart(arrayInicial)
+            console.log(cart)
+        }else{
+            arrayInicial.push(producto)
+            setCart(arrayInicial)
+            console.log(cart)
+        }
     }
 
     const eliminarItem = () => {
