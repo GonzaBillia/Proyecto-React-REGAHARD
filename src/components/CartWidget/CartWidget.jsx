@@ -1,13 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useContext } from 'react'
 import './CartWidget.css'
+import { CartContext } from '../context/CartContext'
 
 const CartWidget = () => {
+
+    const {totalProductos} = useContext(CartContext)
+
     return (
         <>
         
         <img className='img' src="/-shopping-cart_90604.png" alt="" />
-        <p>0</p>
+        <p>{totalProductos}</p>
 
         </>
     )

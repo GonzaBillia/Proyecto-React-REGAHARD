@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ItemCount.css'
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({initial, stock, agregar}) => {
 
     const [contador, setContador] = useState(1)
 
@@ -18,7 +18,7 @@ const ItemCount = ({initial, stock}) => {
     }
 
     const agregarAlCarrito = ()=>{
-        alert("agregaste esta cantidad de productos: " + contador)
+        agregar(contador)
     }
 
 
