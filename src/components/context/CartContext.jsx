@@ -11,31 +11,45 @@ const CartProvider = ({children}) =>{
 
 
     const agregarAlCarrito = (producto) => {
-        if(cart.length == 0){
-            arrayInicial.push(producto)
-            setCart(arrayInicial)
-            console.log(cart)
-        }else{
-            arrayInicial.push(producto)
-            setCart(arrayInicial)
-            console.log(cart)
-        }
+            const productoEnCarritoIndex = cart.findIndex(item => item.id == producto.id)
+
+            if(productoEnCarritoIndex >= 0){
+                const nuevoCart = structuredClone(cart)
+                nuevoCart[productoEnCarritoIndex].cantidad += producto.cantidad
+                return setCart(nuevoCart)
+            }
+
+            setCart(prevState =>([
+                ...prevState,
+                {
+                    ...producto
+                }
+            ]))
+
+
     }
 
-    const eliminarItem = () => {
+    const eliminarItem = (id) => {
+        const productoEnCarritoIndex = cart.findIndex(item => item.id == id)
+
+        const nuevoCart = structuredClone(cart)
+        nuevoCart.splice (productoEnCarritoIndex, 1)
+        setCart(nuevoCart)
 
     }
 
     const vaciarCarrito = () => {
-
+        setCart([])
+        setTotalProductos(0)
+        setTotal(0)
     }
 
-    const cantidadCarrito = () => {
-
+    const cantidadCarrito = (count) => {
+        setTotalProductos(totalProductos + count)
     }
 
-    const totalCarrito = () => {
-
+    const totalCarrito = (producto) => {
+        setTotal((producto.precio * producto.cantidad) + total)
     }
 
 
@@ -44,7 +58,10 @@ const CartProvider = ({children}) =>{
             cart,
             total,
             totalProductos,
-            agregarAlCarrito
+            agregarAlCarrito,
+            vaciarCarrito,
+            cantidadCarrito,
+            totalCarrito
         }}>
             {children}
         </CartContext.Provider>

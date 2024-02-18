@@ -21,7 +21,6 @@ const ItemCount = ({initial, stock, agregar}) => {
         agregar(contador)
     }
 
-
     return (
 
         <div className='itemCount'>
