@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './CartItem.css'
-import { CartContext } from '../context/CartContext'
 
-const CartItem = ({producto}) => {
+const CartItem = ({producto, eliminar}) => {
 
-    const {eliminarItem} = useContext(CartContext)
+    const eliminarItem = ()=>{
+        eliminar(producto)
+    }
 
     return (
         <div className='cardContainer'key={producto.id}>

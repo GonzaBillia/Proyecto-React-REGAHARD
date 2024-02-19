@@ -5,7 +5,12 @@ import './Cart.css'
 
 const Cart = () => {
 
-    const {cart, total, vaciarCarrito} = useContext(CartContext)
+    const {cart, total, vaciarCarrito, eliminarItem} = useContext(CartContext)
+
+    const eliminar = (producto) =>{
+        eliminarItem(producto)
+        
+    }
 
     return (
 
@@ -18,7 +23,7 @@ const Cart = () => {
                     {
                         cart.map((producto)=>{
                             return(
-                                <CartItem key={producto.id} producto={producto}/>
+                                <CartItem key={producto.id} producto={producto} eliminar={eliminar}/>
                             )
                         })
                     }

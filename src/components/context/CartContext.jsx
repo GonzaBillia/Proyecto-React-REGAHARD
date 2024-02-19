@@ -12,27 +12,40 @@ const CartProvider = ({children}) =>{
 
     const agregarAlCarrito = (producto) => {
             const productoEnCarritoIndex = cart.findIndex(item => item.id == producto.id)
-
             if(productoEnCarritoIndex >= 0){
                 const nuevoCart = structuredClone(cart)
-                nuevoCart[productoEnCarritoIndex].cantidad += producto.cantidad
-                return setCart(nuevoCart)
+
+                if((nuevoCart[productoEnCarritoIndex].cantidad + producto.cantidad) > nuevoCart[productoEnCarritoIndex].stock){
+                    alert("No hay Stock suficiente, puedes añadir hasta " + (producto.stock - nuevoCart[productoEnCarritoIndex].cantidad))
+                    
+                    return(cart)
+                }else{
+                    nuevoCart[productoEnCarritoIndex].cantidad += producto.cantidad
+                    return setCart(nuevoCart, cantidadCarrito(producto.cantidad), totalCarrito(producto))
+                    
+                }
+            }else{
+                setCart(prevState =>([
+                    ...prevState,
+                    {
+                        ...producto
+                    }
+                    
+                ]))
+                cantidadCarrito(producto.cantidad)
+    
+                totalCarrito(producto)
             }
 
-            setCart(prevState =>([
-                ...prevState,
-                {
-                    ...producto
-                }
-            ]))
-
-
+            
     }
 
-    const eliminarItem = (id) => {
-        const productoEnCarritoIndex = cart.findIndex(item => item.id == id)
+    const eliminarItem = (producto) => {
+        const productoEnCarritoIndex = cart.indexOf(producto)
 
         const nuevoCart = structuredClone(cart)
+        setTotal(total - (nuevoCart[productoEnCarritoIndex].cantidad * nuevoCart[productoEnCarritoIndex].precio))
+        setTotalProductos(totalProductos - nuevoCart[productoEnCarritoIndex].cantidad)
         nuevoCart.splice (productoEnCarritoIndex, 1)
         setCart(nuevoCart)
 
@@ -61,7 +74,8 @@ const CartProvider = ({children}) =>{
             agregarAlCarrito,
             vaciarCarrito,
             cantidadCarrito,
-            totalCarrito
+            totalCarrito,
+            eliminarItem
         }}>
             {children}
         </CartContext.Provider>

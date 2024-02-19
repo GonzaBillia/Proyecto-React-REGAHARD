@@ -8,7 +8,7 @@ const ItemDetail = ({producto}) => {
 
     const [cart, setCart] = useState(false)
 
-    const {agregarAlCarrito,cantidadCarrito, totalCarrito} = useContext(CartContext)
+    const {agregarAlCarrito} = useContext(CartContext)
 
     const agregar = (count) =>{
         setCart(true)
@@ -17,9 +17,7 @@ const ItemDetail = ({producto}) => {
 
         agregarAlCarrito(producto)
 
-        cantidadCarrito(count)
-
-        totalCarrito(producto)
+        
     }
 
 
