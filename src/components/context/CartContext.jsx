@@ -4,8 +4,7 @@ import React, {createContext, useState} from "react"
 export const CartContext = createContext()
 
 const CartProvider = ({children}) =>{
-    const arrayInicial = []
-    const [cart, setCart] = useState(arrayInicial)
+    const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)
     const [totalProductos, setTotalProductos] = useState(0)
 
