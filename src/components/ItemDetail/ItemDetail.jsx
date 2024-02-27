@@ -29,16 +29,17 @@ const ItemDetail = ({producto}) => {
             <h4>Precio: ${producto.precio}</h4>
             <p>Categoria: {producto.tipoItem}</p>
 
-            {cart ? 
+            {producto.stock == 0 
+            ? 
+            <p>Sin Stock</p> 
+            : 
+            cart ? 
             <>
                 <Link to= '/cart'><button>Ir al Carrito</button></Link>
                 
             </>
             : 
             <ItemCount initial={1} stock={producto.stock} agregar={agregar}/>}
-
-            
-
         </div>
     )
 }

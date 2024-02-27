@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, query, where, doc } from 'firebase/firestore'
 
 
 const ItemListContainer = () => {
@@ -15,24 +15,26 @@ const ItemListContainer = () => {
 
     useEffect(()=>{
 
-        const fetchData = async()=>{
-            try{
-                const res = await fetch('/productos.json')
-                const data = await res.json()
+        //Crear instancia de DB
+        const db = getFirestore()
 
-                if(idCategoria){
-                    const productosFiltrados = data.filter((p)=> p.tipoItem == idCategoria)
-                    setProductos(productosFiltrados)
-                }else{
-                    setProductos(data)
-                }
+        //Generar filtrado de productos
+        const misProductos = idCategoria 
+        ? 
+        query(collection(db, "producto"), where("tipoItem","==",idCategoria)) 
+        : 
+        collection(db,"producto")
 
-            }catch{
-                console.log("error")
-            }
-        }
-
-        fetchData()
+        //Generar documentas solicitados
+        getDocs(misProductos)
+            .then((res)=>{
+                const nuevosProductos = res.docs.map((doc) =>{
+                    const data = doc.data()
+                    return {id: doc.id,...data}
+                })
+                setProductos(nuevosProductos)
+            })
+            .catch((err)=>console.log(err))
 
     },[idCategoria])
 

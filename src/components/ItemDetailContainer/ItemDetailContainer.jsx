@@ -12,18 +12,20 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
 
-        const fetchData = async()=>{
-            try{
-                const res = await fetch('/productos.json')
-                const data = await res.json()
-                const pDetectado = data.find((p)=>p.id == id)
-                setProducto(pDetectado)
-            }catch{
-                console.log("error")
-            }
-        }
+        //Inicializar instancia de DB
+        const db = getFirestore()
 
-        fetchData()
+        //Generar llamado al doc determinado
+        const nuevoDocumento = doc(db,"producto",id)
+
+        //Hacer llamado al doc y lo renderizamos
+        getDoc(nuevoDocumento)
+            .then(res=>{
+                const data = res.data()
+                const nuevoProducto = {id:res.id,...data}
+                setProducto(nuevoProducto)
+            })
+            .catch((err)=>console.log(err))
 
     },[id])
 
