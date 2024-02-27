@@ -33,7 +33,7 @@ const CartProvider = ({children}) =>{
                 ]))
                 cantidadCarrito(producto.cantidad)
     
-                totalCarrito(producto)
+                totalCarrito(producto.precio, producto.cantidad)
             }
 
             
@@ -60,8 +60,10 @@ const CartProvider = ({children}) =>{
         setTotalProductos(totalProductos + count)
     }
 
-    const totalCarrito = (producto) => {
-        setTotal((producto.precio * producto.cantidad) + total)
+    const totalCarrito = (precio, cantidad) => {
+        const calculo = precio * cantidad
+        const sumaTotal = calculo + total
+        setTotal(sumaTotal)
     }
 
 

@@ -5,7 +5,7 @@ import { CartContext } from '../context/CartContext'
 const Checkout = () => {
 
     //Info del Context
-    const {cart, totalCarrito, vaciarCarrito} = useContext(CartContext)
+    const {cart, total, vaciarCarrito} = useContext(CartContext)
 
     //Datos del Componente
     const [nombre, setNombre] = useState("")
@@ -22,14 +22,14 @@ const Checkout = () => {
         event.preventDefault()
 
         //manejo de errores
-        if(!nombre || !apellido || !telefono || email || emailConfirmacion){
+        if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
             setError("Completa todos los campos requeridos")
-            return
+            return;
         }
 
         if(email !== emailConfirmacion){
             setError("el Email no conincide")
-            return
+            return;
         }
 
         //Crear instancia de DB
@@ -42,7 +42,7 @@ const Checkout = () => {
                 modelo: producto.modelo,
                 cantidad: producto.cantidad
             })),
-            total: totalCarrito(),
+            total: total,
             fecha: new Date(),
             nombre,
             apellido,
@@ -114,12 +114,12 @@ const Checkout = () => {
 
                     <div>
                         <label htmlFor="Email">Email</label>
-                        <input name="Email" type="text" onChange={(e)=> setEmail(e.target.value)} />
+                        <input name="Email" type="email" onChange={(e)=> setEmail(e.target.value)} />
                     </div>
 
                     <div>
                         <label htmlFor="EmailConfirmacion">EmailConfirmacion</label>
-                        <input name="EmailConfirmacion" type="text" onChange={(e)=> setEmailConfirmacion(e.target.value)} />
+                        <input name="EmailConfirmacion" type="email" onChange={(e)=> setEmailConfirmacion(e.target.value)} />
                     </div>
 
                     <button type='submit'>Comprar</button>

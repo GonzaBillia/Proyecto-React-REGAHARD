@@ -23,7 +23,8 @@ const Item = ({producto, agregarSolo}) => {
                     
                 </div>
                 </Link>
-                <button onClick={agregarAlCarrito}>Agregar al Carrito</button>
+                {producto.stock == 0 ? <p>No hay Stock</p> : <button onClick={agregarAlCarrito}>Agregar al Carrito</button>}
+                
             </div>
         
         
