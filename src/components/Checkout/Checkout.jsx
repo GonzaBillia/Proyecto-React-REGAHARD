@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react'
-import { collection, addDoc, updateDoc, doc, getDoc, getFirestore } from 'firebase/firestore'
+import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore'
 import { CartContext } from '../context/CartContext'
+import { db } from '../../firebase/config'
 
 const Checkout = () => {
 
@@ -31,9 +32,6 @@ const Checkout = () => {
             setError("el Email no conincide")
             return;
         }
-
-        //Crear instancia de DB
-        const db = getFirestore()
 
         //Generar objeto de la orden de compra
         const orden = {

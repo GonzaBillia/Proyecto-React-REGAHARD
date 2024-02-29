@@ -4,7 +4,8 @@ import React, {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-import { getFirestore, collection, getDocs, query, where, doc } from 'firebase/firestore'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../firebase/config'
 
 
 const ItemListContainer = () => {
@@ -14,9 +15,6 @@ const ItemListContainer = () => {
     const {idCategoria} = useParams()
 
     useEffect(()=>{
-
-        //Crear instancia de DB
-        const db = getFirestore()
 
         //Generar filtrado de productos
         const misProductos = idCategoria 
