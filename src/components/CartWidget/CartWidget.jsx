@@ -10,7 +10,7 @@ const CartWidget = () => {
 
     return (
         <>
-        <Link to='/cart'> <img className='img' src="/src/assets/-shopping-cart_90604.png" alt="" /> </Link>
+        <Link to='/cart'> <img className='h-8 w-auto' src="/src/assets/-shopping-cart_90604.png" alt="" /> </Link>
         <p>{totalProductos}</p>
 
         </>

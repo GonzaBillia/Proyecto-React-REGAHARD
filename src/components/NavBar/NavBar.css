@@ -1,7 +1,6 @@
 .container{
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    margin: 20px 40px;
 }
 
 ul{
@@ -27,5 +26,14 @@ li{
 }
 
 .active{
-    color: red;
+    color: blue;
 }
+
+.ulColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    list-style: none;
+}
+

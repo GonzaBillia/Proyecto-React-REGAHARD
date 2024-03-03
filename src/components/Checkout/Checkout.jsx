@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react'
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore'
 import { CartContext } from '../context/CartContext'
 import { db } from '../../firebase/config'
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import './Checkout.css'
 
 const Checkout = () => {
 
@@ -76,7 +76,7 @@ const Checkout = () => {
     return (
         <div>
             <form className='container mx-auto grid grid-cols-6' onSubmit={manejadorForm}>
-                <div className='col-span-1 col-start-5 row-start-1 mt-10'>
+                <div className='col-span-1 col-start-5 row-start-1 checkoutContainer'>
                     <div className='text-2xl mb-6 font-semibold'>
                         <h3>Tu Pedido</h3>
                     </div>
@@ -92,7 +92,7 @@ const Checkout = () => {
                     ))}
                 </div>
 
-                <div className='col-span-2 col-start-2 mt-10'>
+                <div className='col-span-2 col-start-2 checkoutContainer'>
                     <div className='border-b border-gray-900/10 pb-12 '>
                         <h2 className='text-base font-semibold leading-7 text-gray-900'>
                             Tus Datos de Compra

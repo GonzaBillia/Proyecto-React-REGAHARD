@@ -22,27 +22,7 @@ const ItemDetail = ({producto}) => {
 
 
     return (
-        /*<div key={producto.id} className='itemDetail'>
-            <h3>Marca: {producto.marca}</h3>
-            <h3>Modelo: {producto.modelo}</h3>
-            <img src={producto.img} alt={producto.alt} className='cardImg'/>
-            <h4>Precio: ${producto.precio}</h4>
-            <p>Categoria: {producto.tipoItem}</p>
-
-            {producto.stock == 0 
-            ? 
-            <p>Sin Stock</p> 
-            : 
-            cart ? 
-            <>
-                <Link to= '/cart'><button>Ir al Carrito</button></Link>
-                
-            </>
-            : 
-            <ItemCount initial={1} stock={producto.stock} agregar={agregar}/>}
-            </div>*/
-
-        <div className='container mx-auto grid grid-cols-12 grid-flow-rows p-10'>
+        <div className='container mx-auto grid grid-cols-12 grid-flow-rows p-10 detailContainer'>
             <div className='col-span-6 p-10'>
                 <img src={producto.img} alt={producto.alt} className='w-full'/>
             </div>

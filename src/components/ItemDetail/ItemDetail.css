@@ -1,10 +1,3 @@
-.itemDetail{
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 30px;
-    padding: 20px;
-
+.detailContainer{
+    margin-top: 64px;
 }
