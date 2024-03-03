@@ -4,12 +4,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 30px;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 15px;
+    margin: 20px;
+
 }
 
-.cardImg{
-    width: 250px;
+.accionStock{
+    margin: 10px;
 }

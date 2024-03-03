@@ -11,7 +11,7 @@ ul{
     list-style: none;
 }
 
-.cartWidget, h1, .logo{
+.cartWidget, h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +22,10 @@ a{
     color: black;
 }
 
-.active{
-    color: red;
+li{
+    color: black;
 }
 
-.logoImg{
-    width: 90%;
+.active{
+    color: red;
 }
