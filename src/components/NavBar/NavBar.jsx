@@ -33,7 +33,7 @@ const NavBar = () => {
                     </div>
                     <div className="flex flex-shrink-0 items-center justify-center  lg:justify-center lg:col-span-3 col-span-8">
                             <NavLink to={`/`}>
-                                <img className='h-4 w-auto' src="/src/assets/media/imagenes/logo/Regahard.png" alt="logo" />
+                                <img className='h-4 w-auto' src="https://firebasestorage.googleapis.com/v0/b/proyecto-final-react-cod-c21ca.appspot.com/o/Regahard.png?alt=media&token=733069e8-3744-4ae2-81f1-9f78b8b1d0ce" alt="logo" />
                             </NavLink>
                         </div>
                     <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-center col-span-6">
