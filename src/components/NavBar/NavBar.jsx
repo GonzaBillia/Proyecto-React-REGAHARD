@@ -43,7 +43,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`/`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/`}>
                                             Inicio
                                         </NavLink>
                                     </li>
@@ -51,7 +51,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`categoria/Microprocesador`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Microprocesador`}>
                                             Procesadores
                                         </NavLink>
                                     </li>
@@ -59,7 +59,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`categoria/Placa Madre`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Placa Madre`}>
                                             Placas Madre
                                         </NavLink>
                                     </li>
@@ -67,7 +67,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`categoria/Disco`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Disco`}>
                                             Discos SSD
                                         </NavLink>
                                     </li>
@@ -75,7 +75,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`categoria/Memoria Ram`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Memoria Ram`}>
                                             Memorias Ram
                                         </NavLink>
                                     </li>
@@ -83,7 +83,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`categoria/Fuente`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Fuente`}>
                                             Fuentes
                                         </NavLink>
                                     </li>
@@ -91,7 +91,7 @@ const NavBar = () => {
                                         'text-black hover:bg-gray-400 hover:text-white',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
-                                        <NavLink to={`categoria/Gabinete`}>
+                                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Gabinete`}>
                                             Gabinetes
                                         </NavLink>
                                     </li>
