@@ -40,7 +40,7 @@ const NavBar = () => {
                             <div className="flex items-center justify-center hidden lg:ml-6 lg:block">
                                 <ul className="flex space-x-7 items-center justify-center">
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/`}>
@@ -48,7 +48,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </li>
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Microprocesador`}>
@@ -56,7 +56,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </li>
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Placa Madre`}>
@@ -64,7 +64,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </li>
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Disco`}>
@@ -72,7 +72,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </li>
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Memoria Ram`}>
@@ -80,7 +80,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </li>
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Fuente`}>
@@ -88,7 +88,7 @@ const NavBar = () => {
                                         </NavLink>
                                     </li>
                                     <li className= {classNames(
-                                        'text-black hover:bg-gray-400 hover:text-white',
+                                        'text-black hover:text-violet-700 duration-200',
                                         'rounded-md px-3 py-2 text-sm font-medium'
                                         )}>
                                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Gabinete`}>
@@ -110,7 +110,7 @@ const NavBar = () => {
                     <ul className='ulColumn'>
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/`}>
@@ -119,7 +119,7 @@ const NavBar = () => {
                     </li>
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Microprocesador`}>
@@ -128,7 +128,7 @@ const NavBar = () => {
                     </li>
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Placa Madre`}>
@@ -137,7 +137,7 @@ const NavBar = () => {
                     </li>
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Disco`}>
@@ -146,7 +146,7 @@ const NavBar = () => {
                     </li>
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Memoria Ram`}>
@@ -156,7 +156,7 @@ const NavBar = () => {
                     
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Fuente`}>
@@ -166,7 +166,7 @@ const NavBar = () => {
                     
                     
                     <li className= {classNames(
-                        'text-black hover:bg-gray-400 hover:text-white',
+                        'text-black hover:text-violet-700 duration-200',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
                         <NavLink to={`/Proyecto-React-REGAHARD/categoria/Gabinete`}>
