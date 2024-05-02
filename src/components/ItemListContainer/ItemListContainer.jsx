@@ -30,7 +30,7 @@ const ItemListContainer = () => {
                     const data = doc.data()
                     return {id: doc.id,...data}
                 })
-                setProductos(nuevosProductos)
+                setProductos(nuevosProductos.sort((a,b)=> a.precio - b.precio))
             })
             .catch((err)=>console.log(err))
 
