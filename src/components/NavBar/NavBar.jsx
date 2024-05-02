@@ -32,7 +32,7 @@ const NavBar = () => {
                         </Disclosure.Button>
                     </div>
                     <div className="flex flex-shrink-0 items-center justify-center  lg:justify-center lg:col-span-3 col-span-8">
-                            <NavLink to={`/`}>
+                            <NavLink to={`/Proyecto-React-REGAHARD/`}>
                                 <img className='h-4 w-auto' src="https://firebasestorage.googleapis.com/v0/b/proyecto-final-react-cod-c21ca.appspot.com/o/Regahard.png?alt=media&token=733069e8-3744-4ae2-81f1-9f78b8b1d0ce" alt="logo" />
                             </NavLink>
                         </div>
@@ -113,7 +113,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`/`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/`}>
                             Inicio
                         </NavLink>
                     </li>
@@ -122,7 +122,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`categoria/Microprocesador`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Microprocesador`}>
                             Procesadores
                         </NavLink>
                     </li>
@@ -131,7 +131,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`categoria/Placa Madre`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Placa Madre`}>
                             Placas Madre
                         </NavLink>
                     </li>
@@ -140,7 +140,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`categoria/Disco`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Disco`}>
                             Discos SSD
                         </NavLink>
                     </li>
@@ -149,7 +149,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`categoria/Memoria Ram`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Memoria Ram`}>
                             Memorias Ram
                         </NavLink>
                     </li>
@@ -159,7 +159,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`categoria/Fuente`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Fuente`}>
                             Fuentes
                         </NavLink>
                     </li>
@@ -169,7 +169,7 @@ const NavBar = () => {
                         'text-black hover:bg-gray-400 hover:text-white',
                         'rounded-md px-3 py-2 text-sm font-medium'
                         )}>
-                        <NavLink to={`categoria/Gabinete`}>
+                        <NavLink to={`/Proyecto-React-REGAHARD/categoria/Gabinete`}>
                             Gabinetes
                         </NavLink>
                     </li>
