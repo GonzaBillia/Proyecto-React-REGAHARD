@@ -25,15 +25,15 @@ function App() {
 
         <Routes>
 
-          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/Proyecto-React-REGAHARD/' element={<ItemListContainer/>}/>
 
-          <Route path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
+          <Route path='/Proyecto-React-REGAHARD/categoria/:idCategoria' element={<ItemListContainer/>}/>
 
-          <Route path='/descripcion/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/Proyecto-React-REGAHARD/descripcion/:id' element={<ItemDetailContainer/>}/>
 
-          <Route path= '/cart' element= {<Cart/>}/>
+          <Route path= '/Proyecto-React-REGAHARD/cart' element= {<Cart/>}/>
 
-          <Route path= '/checkout' element= {<Checkout/>}/>
+          <Route path= '/Proyecto-React-REGAHARD/checkout' element= {<Checkout/>}/>
 
           <Route path='*' element={<Error/>}/>
 
