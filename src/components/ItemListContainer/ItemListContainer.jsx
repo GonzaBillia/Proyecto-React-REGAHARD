@@ -37,7 +37,7 @@ const ItemListContainer = () => {
     },[idCategoria])
 
     return (
-        <div className='itemListContainer'>
+        <div className='itemListContainer pt-10'>
 
             {productos.length == 0 ?
             <h2>Cargando...</h2> :

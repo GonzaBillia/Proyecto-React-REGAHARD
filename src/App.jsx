@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import CartProvider from './components/context/CartContext'
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout'
+import SearchListContainer from './components/SearchListContainer/SearchListContainer'
 
 
 
@@ -34,6 +35,8 @@ function App() {
           <Route path= 'Proyecto-React-REGAHARD/cart' element= {<Cart/>}/>
 
           <Route path= 'Proyecto-React-REGAHARD/checkout' element= {<Checkout/>}/>
+
+          <Route path= 'Proyecto-React-REGAHARD/search/:busqueda' element= {<SearchListContainer/>}/>
 
           <Route path='*' element={<Error/>}/>
 

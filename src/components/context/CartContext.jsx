@@ -7,6 +7,11 @@ const CartProvider = ({children}) =>{
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)
     const [totalProductos, setTotalProductos] = useState(0)
+    const [busqueda, setBusqueda] = useState("")
+
+    const buscar = (e) => {
+        setBusqueda(e)
+    }
 
 
     const agregarAlCarrito = (producto) => {
@@ -76,7 +81,10 @@ const CartProvider = ({children}) =>{
             vaciarCarrito,
             cantidadCarrito,
             totalCarrito,
-            eliminarItem
+            eliminarItem,
+            busqueda,
+            setBusqueda,
+            buscar
         }}>
             {children}
         </CartContext.Provider>
