@@ -36,7 +36,7 @@ const Item = ({producto, agregarSolo}) => {
                 </div>
             </Link>
             <div className='accionStock'>
-                {producto.stock == 0 ? <p className='mt-2 px-8 py-3 text-md text-gray-500'>No hay Stock</p> : <button className='mt-2 flex w-full items-center justify-center border border-transparent bg-violet-700 px-8 py-3 text-base font-medium text-white hover:bg-violet-900 duration-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 w-72 rounded-b-md' onClick={agregarAlCarrito}>Agregar al Carrito</button>}
+                {producto.stock == 0 ? <p className='mt-2 px-8 py-3 text-md text-gray-500'>No hay Stock</p> : <button className='mt-2 flex items-center justify-center border border-transparent bg-violet-700 px-8 py-3 text-base font-medium text-white hover:bg-violet-900 duration-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 w-72 rounded-b-md' onClick={agregarAlCarrito}>Agregar al Carrito</button>}
             </div>
         </div>
     )
