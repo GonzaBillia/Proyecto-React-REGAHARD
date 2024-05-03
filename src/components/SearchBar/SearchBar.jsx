@@ -16,7 +16,10 @@ export const SearchBar = () => {
 
     return (
             <div className="flex justify-center items-center lg:w-80 xl:w-96">
-                    <form className="relative flex w-full flex-wrap items-stretch">
+                    <form className="relative flex w-full flex-wrap items-stretch" onSubmit={e => {
+                                    e.preventDefault()
+                                    cambiarState(texto)
+                                    }}>
                         <input
                             type="text"
                             name='search'
@@ -25,14 +28,9 @@ export const SearchBar = () => {
                             onChange={e => setTexto(e.target.value)}/>
 
                         {/* <!--Search button--> */}
-                        <Link to={`/Proyecto-React-REGAHARD/search/${texto}`}>
                             <button
                                 className="flex items-center justify-center border border-transparent bg-violet-700 px-6 py-2.5 text-base font-medium text-white hover:bg-violet-900 duration-200 focus:outline-none active:ring-2 focus:ring-violet-600 ease-in-out rounded-r"
-                                type="button"
-                                onClick={e => {
-                                    e.preventDefault()
-                                    cambiarState(texto)
-                                    }}>
+                                type="submit">
                                 
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +45,7 @@ export const SearchBar = () => {
                                 </svg>
                                 
                             </button>
-                            </Link>
+                            
                     </form>
 
                     

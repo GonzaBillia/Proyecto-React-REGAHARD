@@ -13,9 +13,9 @@ const SearchListContainer = () => {
 
 useEffect(()=>{
     search = busqueda
-    console.log(search)
+
     //Generar filtrado de productos
-    const misProductos = collection(db,"producto")
+    const misProductos = search ? collection(db,"producto") : query(collection(db, "producto"), where("marca","==",search))
 
     //Generar documentas solicitados
     getDocs(misProductos)

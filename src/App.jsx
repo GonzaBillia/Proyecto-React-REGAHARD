@@ -36,7 +36,7 @@ function App() {
 
           <Route path= 'Proyecto-React-REGAHARD/checkout' element= {<Checkout/>}/>
 
-          <Route path= 'Proyecto-React-REGAHARD/search/:busqueda' element= {<SearchListContainer/>}/>
+          <Route path= 'Proyecto-React-REGAHARD/?search=busqueda' element= {<SearchListContainer/>}/>
 
           <Route path='*' element={<Error/>}/>
 
