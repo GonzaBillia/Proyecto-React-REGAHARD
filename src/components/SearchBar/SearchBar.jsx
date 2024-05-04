@@ -29,7 +29,7 @@ export const SearchBar = () => {
 
                         {/* <!--Search button--> */}
                             <button
-                                className="flex items-center justify-center border border-transparent bg-violet-700 px-6 py-2.5 text-base font-medium text-white hover:bg-violet-900 duration-200 focus:outline-none active:ring-2 focus:ring-violet-600 ease-in-out rounded-r"
+                                className="flex items-center justify-center border border-transparent bg-deep-purple-500 px-6 py-2.5 text-base font-medium text-white hover:bg-violet-900 duration-200 focus:outline-none active:ring-2 focus:ring-violet-600 ease-in-out rounded-r"
                                 type="submit">
                                 
                                 <svg

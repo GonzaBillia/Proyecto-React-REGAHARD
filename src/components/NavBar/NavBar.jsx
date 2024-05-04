@@ -19,7 +19,7 @@ const NavBar = () => {
         {({ open }) => (
             <>
             <div className="mx-auto px-0 max-w-full">
-                <div className="relative h-16 items-center justify-between grid lg:grid-cols-12 grid-cols-3 grid-rows-1">
+                <div className="relative h-20 items-center justify-between grid lg:grid-cols-12 grid-cols-3 grid-rows-1">
                     <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                         {/* Mobile menu button*/}
                         <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -40,11 +40,11 @@ const NavBar = () => {
                     <div className="lg:flex hidden flex-1 items-center justify-center lg:items-stretch lg:justify-center lg:col-start-5 col-span-4">
                         <SearchBar/>
                     </div>
-                    <div className='cartWidget absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:col-start-11 xl:col-start-10 lg:ml-6 lg:pr-0 col-span-1'>
+                    <div className='cartWidget  absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:col-start-11 xl:col-start-10 lg:ml-6 lg:pr-0 col-span-1'>
                         <CartWidget/>
                     </div>
                 </div>
-                <div className="relative h-10 bg-violet-700 mx-0 items-center hidden justify-between lg:grid lg:grid-cols-1 grid-cols-1 grid-rows-1">
+                <div className="relative h-10 bg-deep-purple-500 mx-0 items-center hidden justify-between lg:grid lg:grid-cols-1 grid-cols-1 grid-rows-1">
                     <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-center col-span-6">
                             <div className="flex items-center justify-center lg:ml-6 lg:block">
                                 <ul className="flex space-x-7 items-center justify-center">
@@ -108,7 +108,7 @@ const NavBar = () => {
                             </div>
                     </div>
                 </div>
-                <div className="relative h-12 bg-violet-700 mx-0 items-center lg:hidden justify-between grid grid-cols-1 grid-rows-1">
+                <div className="relative h-12 bg-deep-purple-500 mx-0 items-center lg:hidden justify-between grid grid-cols-1 grid-rows-1">
                     <SearchBar/>
                 </div>
             </div>

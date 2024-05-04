@@ -12,7 +12,7 @@ const SearchListContainer = () => {
     const {search} = useParams()
 
 useEffect(()=>{
-    search = busqueda
+    
 
     //Generar filtrado de productos
     const misProductos = search ? collection(db,"producto") : query(collection(db, "producto"), where("marca","==",search))

@@ -10,6 +10,7 @@ import CartProvider from './components/context/CartContext'
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout'
 import SearchListContainer from './components/SearchListContainer/SearchListContainer'
+import MainContainer from './components/MainContainer/MainContainer'
 
 
 
@@ -26,7 +27,7 @@ function App() {
 
         <Routes>
 
-          <Route path='Proyecto-React-REGAHARD/' element={<ItemListContainer/>}/>
+          <Route path='Proyecto-React-REGAHARD/' element={<MainContainer/>}/>
 
           <Route path='Proyecto-React-REGAHARD/categoria/:idCategoria' element={<ItemListContainer/>}/>
 
