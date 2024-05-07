@@ -1,33 +1,42 @@
 import React , {useState, useContext} from 'react'
 import "./SearchBar.css"
 import SearchListContainer from '../SearchListContainer/SearchListContainer';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext'
+import { Link, NavLink } from 'react-router-dom';
+import { SearchContext } from '../context/SearchContext'
 
 export const SearchBar = () => {
 
-    const {buscar} = useContext(CartContext)
-    const [texto, setTexto] = useState("")
+    const initialForm = {titulo: ""}
 
-    const cambiarState = (texto) => {
-        buscar(texto)
-        console.log(texto)
+    const {handleSearch} = useContext(SearchContext)
+    const [form, setForm] = useState(initialForm)
+
+    const handleChange = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        handleSearch(form)
+        setForm(initialForm)
     }
 
     return (
             <div className="flex justify-center items-center lg:w-80 xl:w-96">
-                    <form className="relative flex w-full flex-wrap items-stretch" onSubmit={e => {
-                                    e.preventDefault()
-                                    cambiarState(texto)
-                                    }}>
+                    <form className="relative flex w-full flex-wrap items-stretch" onSubmit={handleSubmit}>
                         <input
                             type="text"
-                            name='search'
+                            name='titulo'
                             className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-violet-600 focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-violet-600"
                             placeholder="Buscar"
-                            onChange={e => setTexto(e.target.value)}/>
+                            onChange={handleChange} 
+                            value={form.titulo}/>
 
                         {/* <!--Search button--> */}
+                        
                             <button
                                 className="flex items-center justify-center border border-transparent bg-deep-purple-500 px-6 py-2.5 text-base font-medium text-white hover:bg-violet-900 duration-200 focus:outline-none active:ring-2 focus:ring-violet-600 ease-in-out rounded-r"
                                 type="submit">
@@ -45,7 +54,7 @@ export const SearchBar = () => {
                                 </svg>
                                 
                             </button>
-                            
+                        
                     </form>
 
                     

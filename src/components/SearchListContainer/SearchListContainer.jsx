@@ -1,6 +1,6 @@
 import React ,{useState, useEffect, useContext} from 'react'
 import ItemList from '../ItemList/ItemList'
-import { CartContext } from '../context/CartContext'
+import { SearchContext } from '../context/SearchContext'
 import './SearchListContainer.css'
 import { useParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
@@ -8,15 +8,17 @@ import { db } from '../../firebase/config'
 
 const SearchListContainer = () => {
     const [productos, setProductos] = useState([])
-    const {busqueda} = useContext(CartContext)
+    const {busqueda} = useContext(SearchContext)
     const {search} = useParams()
+
+    
 
 useEffect(()=>{
     
-
+    const {titulo} = busqueda
     //Generar filtrado de productos
-    const misProductos = search ? collection(db,"producto") : query(collection(db, "producto"), where("marca","==",search))
-
+    const misProductos = search ? query(collection(db, "producto"), where("marca","==",titulo)) : collection(db,"producto")
+    
     //Generar documentas solicitados
     getDocs(misProductos)
         .then((res)=>{
@@ -24,13 +26,14 @@ useEffect(()=>{
                 const data = doc.data()
                 return {id: doc.id,...data}
             })
-            setProductos(nuevosProductos.filter(producto => producto.marca.includes(search.toLowerCase())|| producto.modelo.includes(search.toLowerCase())))
+            setProductos(nuevosProductos.filter(producto => producto.marca.includes(titulo)|| producto.modelo.includes(titulo)))
             setProductos(nuevosProductos.sort((a,b)=> a.precio - b.precio))
         })
         .catch((err)=>console.log(err))
+    
+    console.log(productos)
 
-
-},[busqueda])
+},[search])
 
 console.log(busqueda)
 

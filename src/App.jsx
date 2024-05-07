@@ -11,6 +11,7 @@ import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout'
 import SearchListContainer from './components/SearchListContainer/SearchListContainer'
 import MainContainer from './components/MainContainer/MainContainer'
+import SearchProvider from './components/context/SearchContext'
 
 
 
@@ -21,6 +22,7 @@ function App() {
     <>
       <BrowserRouter>
         <CartProvider>
+        <SearchProvider>
 
 
         <NavBar/>
@@ -37,13 +39,13 @@ function App() {
 
           <Route path= 'Proyecto-React-REGAHARD/checkout' element= {<Checkout/>}/>
 
-          <Route path= 'Proyecto-React-REGAHARD/?search=busqueda' element= {<SearchListContainer/>}/>
+          <Route path= 'Proyecto-React-REGAHARD/?search=:search' element= {<SearchListContainer/>}/>
 
           <Route path='*' element={<Error/>}/>
 
         </Routes>
 
-
+        </SearchProvider>
         </CartProvider>
       </BrowserRouter>
     </>
