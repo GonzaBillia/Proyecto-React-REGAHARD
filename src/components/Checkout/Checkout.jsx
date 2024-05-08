@@ -75,8 +75,8 @@ const Checkout = () => {
 
     return (
         <div>
-            <form className='container mx-auto grid grid-cols-4 md:grid-cols-12 md:grid-rows-2 pt-32' onSubmit={manejadorForm}>
-                <div className='grid grid-cols-6 grid-rows-6 col-span-4 col-start-1 md:col-start-8 row-start-1 row-span-1 md:row-span-2 checkoutContainer shadow-md rounded-md px-3 m-5'>
+            <form className='container mx-auto grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-2 pt-32' onSubmit={manejadorForm}>
+                <div className='grid grid-cols-6 grid-rows-6 col-span-4 col-start-1 lg:col-start-8 row-start-1 row-span-1 lg:row-span-2 checkoutContainer shadow-md rounded-md px-3 m-5'>
                     <div className='text-3xl font-semibold row-span-1 row-start-1 col-span-4 flex items-center'>
                         <h3>Tu Pedido</h3>
                     </div>
@@ -114,7 +114,7 @@ const Checkout = () => {
                     </div>
                 </div>
 
-                <div className='col-span-4 row-start-2 row-span-1 md:col-span-5 md:row-start-1 md:col-start-2 md:row-span-6 checkoutContainer shadow-md rounded-md px-3 m-5'>
+                <div className='col-span-4 row-start-2 row-span-1 lg:col-span-5 lg:row-start-1 lg:col-start-2 lg:row-span-6 checkoutContainer shadow-md rounded-md px-3 m-5'>
                     <div className='border-b border-gray-900/10 pb-12 px-3'>
                         <h2 className='mt-5 text-3xl font-semibold leading-7 text-gray-900'>
                             Tus Datos de Compra
@@ -192,7 +192,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
 
-                                    <button className='col-span-full flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' type='submit'>Comprar</button>
+                                    <button className='col-span-full flex w-full items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900' type='submit'>Comprar</button>
 
                                     {error && <p>{error}</p>}
 

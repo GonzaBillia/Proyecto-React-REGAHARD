@@ -6,6 +6,7 @@ import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../firebase/config'
+import { Spinner } from '@material-tailwind/react'
 
 
 const ItemListContainer = () => {
@@ -40,7 +41,8 @@ const ItemListContainer = () => {
         <div className='itemListContainer'>
 
             {productos.length == 0 ?
-            <h2>Cargando...</h2> :
+            <Spinner color='deep-purple' className='h-20 w-20 mt-48' />
+            :
             <ItemList productos={productos}/>
             }
 

@@ -23,7 +23,7 @@ const CartItem = ({producto, eliminar}) => {
                         </div>
                     </div>
                     <div className='col-span-1 col-start-4 flex justify-center'>
-                        <button className='flex w-auto items-center justify-center rounded-md border border-gray-300 bg-white px-8 py-3 text-base font-medium text-black hover:bg-red-600 hover:text-white focus:outline-none focus:ring-2  focus:ring-offset-2 duration-200' onClick={eliminarItem}>X</button>
+                        <button className='flex w-auto items-center justify-center rounded-md border border-gray-300 bg-white px-8 py-3 text-base font-medium text-black hover:bg-red-600 hover:text-white duration-200' onClick={eliminarItem}>X</button>
                     </div>
                 </div>
         </div>

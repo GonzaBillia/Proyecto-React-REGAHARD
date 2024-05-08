@@ -42,11 +42,11 @@ const Cart = () => {
                         <h2 className='text-3xl xl:text-4xl'>Total: $ {total}</h2>
                     </div>
                     <div className='mt-8 flex justify-center'>
-                        <button className='flex min-w-56 items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 focus:outline-none focus:ring-2 focus:ring-deep-purple-500 focus:ring-offset-2 duration-200' onClick={vaciarCarrito}>Vaciar Carrito</button>
+                        <button className='flex min-w-56 items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 duration-200' onClick={vaciarCarrito}>Vaciar Carrito</button>
                     </div>
                     <div className='my-4 flex justify-center'>
                         <Link to='/Proyecto-React-REGAHARD/checkout'>
-                            <button className='flex min-w-56 items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 focus:outline-none focus:ring-2 focus:ring-deep-purple-500 focus:ring-offset-2 duration-200'>Finalizar Compra</button>
+                            <button className='flex min-w-56 items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 duration-200'>Finalizar Compra</button>
                         </Link>
                     </div>
                     
