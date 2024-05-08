@@ -75,37 +75,59 @@ const Checkout = () => {
 
     return (
         <div>
-            <form className='container mx-auto grid grid-cols-6' onSubmit={manejadorForm}>
-                <div className='col-span-1 col-start-5 row-start-1 checkoutContainer'>
-                    <div className='text-2xl mb-6 font-semibold'>
+            <form className='container mx-auto grid grid-cols-4 md:grid-cols-12 md:grid-rows-2 pt-32' onSubmit={manejadorForm}>
+                <div className='grid grid-cols-6 grid-rows-6 col-span-4 col-start-1 md:col-start-8 row-start-1 row-span-1 md:row-span-2 checkoutContainer shadow-md rounded-md px-3 m-5'>
+                    <div className='text-3xl font-semibold row-span-1 row-start-1 col-span-4 flex items-center'>
                         <h3>Tu Pedido</h3>
                     </div>
-                    {/* Mapeo de Productos */}
-                    {cart.map((producto)=>(
-                        <div key={producto.id}>
-                            <p className='my-3 text-lg'>
-                                {""}
-                                {producto.marca}{" "}{producto.modelo} x {producto.cantidad}
-                            </p>
+                    <div className='col-span-6 row-start-2 row-span-4'>
+                        <div className='grid grid-cols-6 grid-rows-1 border-b'>
+                            <p className='col-start-1 col-span-3 flex items-center'>Producto</p>
+                            <p className='col-start-4 col-span-1 flex items-center justify-end'>Cantidad</p>
+                            <p className='col-start-5 col-span-2 flex items-center justify-end'>Precio</p>
                         </div>
                         
-                    ))}
+                        {/* Mapeo de Productos */}
+                        {cart.map((producto)=>(
+                            <div key={producto.id} className='grid grid-cols-6 grid-rows-1 border-b'>
+                                <div className='col-start-1 col-span-3 flex items-center'>
+                                    <p className='my-2 text-md lg:text-lg truncate capitalize'>
+                                        {producto.marca}{" "}{producto.modelo}
+                                    </p>
+                                </div>
+                                <div className='col-start-4 col-span-1 flex items-center justify-end'>
+                                    <p className='my-2 text-md lg:text-lg '>
+                                        {producto.cantidad}
+                                    </p>
+                                </div>
+                                <div className='col-start-5 col-span-2 flex items-center justify-end'>
+                                    <p>
+                                        ${producto.precio}
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        ))}
+                    </div>
+                    <div className='mt-5 flex items-center row-start-6 row-span-1 col-span-6'>
+                        <p className='my-3 text-xl md:text-3xl'>Total: ${total}</p>
+                    </div>
                 </div>
 
-                <div className='col-span-2 col-start-2 checkoutContainer'>
-                    <div className='border-b border-gray-900/10 pb-12 '>
-                        <h2 className='text-base font-semibold leading-7 text-gray-900'>
+                <div className='col-span-4 row-start-2 row-span-1 md:col-span-5 md:row-start-1 md:col-start-2 md:row-span-6 checkoutContainer shadow-md rounded-md px-3 m-5'>
+                    <div className='border-b border-gray-900/10 pb-12 px-3'>
+                        <h2 className='mt-5 text-3xl font-semibold leading-7 text-gray-900'>
                             Tus Datos de Compra
                         </h2>
-                        <p className='mt-1 text-sm leading-6 text-gray-600'>
+                        <p className='mt-2 text-sm leading-6 text-gray-600'>
                             Rellena los campos para poder completar la operación
                         </p>
 
-                        <div className="mt-10 grid grid-cols-1 gap-x-4 gap-y-8">
-                            <div className="border-b border-gray-900/10 pb-12">
+                        <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-8">
+                            <div className="border-b border-gray-900/10">
                                 <h2 className="text-base font-semibold leading-7 text-gray-900">Informacion Personal</h2>
 
-                                <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                                     <div className="sm:col-span-3">
                                         <label htmlFor="nombre" className="block text-sm font-medium leading-6 text-gray-900" >
                                             Nombre
@@ -175,8 +197,8 @@ const Checkout = () => {
                                     {error && <p>{error}</p>}
 
                                     {ordenId && (
-                                        <p>
-                                            OrdenId: {ordenId}
+                                        <p className='col-span-full'>
+                                            <b>Orden de Comrpa:</b> {ordenId}
                                         </p>
                                     )}
                                 </div>

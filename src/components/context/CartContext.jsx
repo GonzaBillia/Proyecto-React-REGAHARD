@@ -20,7 +20,7 @@ const CartProvider = ({children}) =>{
                     return(cart)
                 }else{
                     nuevoCart[productoEnCarritoIndex].cantidad += producto.cantidad
-                    return setCart(nuevoCart, cantidadCarrito(producto.cantidad), totalCarrito(producto))
+                    return setCart(nuevoCart, cantidadCarrito(producto.cantidad), totalCarrito(producto.precio, producto.cantidad))
                     
                 }
             }else{

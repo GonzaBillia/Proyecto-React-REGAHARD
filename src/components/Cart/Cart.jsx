@@ -15,15 +15,15 @@ const Cart = () => {
 
     return (
 
-        <div className='container mx-auto grid grid-cols-12 grid-rows-12'>
-            <div className='cartContainer col-start-1 col-span-6 row-span-full row-start-2'>
+        <div className='container mx-auto grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-12 pt-32'>
+            <div className='cartContainer mx-2 shadow-md rounded-md col-start-1 col-span-7 row-span-full row-start-1'>
                 {cart.length == 0 
                 ?
                     <div className='col-start-2 col-end-6 row-span-1 row-start-2'>
                         <h2 className='text-3xl m-4'>No hay Productos en el Carrito</h2>
                     </div>
                 :
-                    <div className='' key={cart.id}>
+                    <div className='m-5' key={cart.id}>
                         {
                             cart.map((producto)=>{
                                 return(
@@ -36,17 +36,17 @@ const Cart = () => {
             </div>
             
 
-            <div className='cartContainer col-start-8 col-end-11 row-start-2 row-end-6 row-span-3'>
+            <div className='cartContainer mx-2 shadow-md rounded-md col-span-4 lg:col-start-8 lg:col-end-12 lg:row-start-1 lg:row-end-7 lg:row-span-3'>
                 <div className='m-5'>
                     <div className='mb-4'>
-                        <h2 className='text-4xl'>Total: $ {total}</h2>
+                        <h2 className='text-3xl xl:text-4xl'>Total: $ {total}</h2>
                     </div>
-                    <div className='mt-8'>
-                        <button className='flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' onClick={vaciarCarrito}>Vaciar Carrito</button>
+                    <div className='mt-8 flex justify-center'>
+                        <button className='flex min-w-56 items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 focus:outline-none focus:ring-2 focus:ring-deep-purple-500 focus:ring-offset-2 duration-200' onClick={vaciarCarrito}>Vaciar Carrito</button>
                     </div>
-                    <div className='my-4'>
+                    <div className='my-4 flex justify-center'>
                         <Link to='/Proyecto-React-REGAHARD/checkout'>
-                            <button className='flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'>Finalizar Compra</button>
+                            <button className='flex min-w-56 items-center justify-center rounded-md border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 focus:outline-none focus:ring-2 focus:ring-deep-purple-500 focus:ring-offset-2 duration-200'>Finalizar Compra</button>
                         </Link>
                     </div>
                     

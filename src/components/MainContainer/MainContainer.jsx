@@ -5,7 +5,7 @@ import FlowCarousel from '../Carousel/FlowCarousel'
 
 const MainContainer = () => {
     return (
-        <div className='w-full'>
+        <div className='w-full pt-32'>
             
             <FlowCarousel/>
             <ItemListContainer/>
