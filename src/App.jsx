@@ -12,6 +12,7 @@ import Checkout from './components/Checkout/Checkout'
 import SearchListContainer from './components/SearchListContainer/SearchListContainer'
 import MainContainer from './components/MainContainer/MainContainer'
 import SearchProvider from './components/context/SearchContext'
+import Footer from './components/Footer/Footer'
 
 
 
@@ -44,6 +45,8 @@ function App() {
           <Route path='*' element={<Error/>}/>
 
         </Routes>
+
+        <Footer/>
 
         </SearchProvider>
         </CartProvider>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Item.css'
 import { Link } from 'react-router-dom'
+import { Badge } from '@material-tailwind/react'
 
 const Item = ({producto, agregarSolo}) => {
 
@@ -11,8 +12,13 @@ const Item = ({producto, agregarSolo}) => {
     }
 
     return (
-        <div className='card w-72 shadow-md rounded-md' key={producto.id}>
+        <div className='card w-64 shadow-md rounded-md' key={producto.id}>
             <Link to={`/Proyecto-React-REGAHARD/descripcion/${producto.id}`}>
+                <Badge content ={
+                    producto.stock == 1 ? "Ultimo" : "Disponible"
+                } color={
+                    producto.stock == 1 ? "yellow" : "green"
+                }>
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white lg:aspect-none hover:scale-105 duration-300 lg:h-80">
                     <img
                     src={producto.img}
@@ -20,9 +26,10 @@ const Item = ({producto, agregarSolo}) => {
                     className="h-full w-full object-contain object-center lg:h-full lg:w-full"
                     />
                 </div>
+                </Badge>
             </Link>
-                <div className="mt-4 pl-2 pr-2 flex justify-between w-72">
-                    <div className='w-52'>
+                <div className="mt-4 pl-2 pr-2 flex justify-between w-64">
+                    <div className='w-44'>
                         <Link to={`/Proyecto-React-REGAHARD/descripcion/${producto.id}`}>
                             <h3 className="text-lg text-gray-700 truncate capitalize">
                                 <span aria-hidden="true">
@@ -39,7 +46,7 @@ const Item = ({producto, agregarSolo}) => {
                 </div>
             
             <div className='accionStock'>
-                {producto.stock == 0 ? <p className='mt-2 px-8 py-3 text-md text-gray-500'>No hay Stock</p> : <button className='mt-2 flex items-center justify-center border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 duration-200 w-72 rounded-b-md' onClick={agregarAlCarrito}>Agregar al Carrito</button>}
+                {producto.stock == 0 ? <p className='mt-2 px-8 py-3 text-md text-gray-500'>No hay Stock</p> : <button className='mt-2 flex items-center justify-center border border-transparent bg-deep-purple-500 px-8 py-3 text-base font-medium text-white hover:bg-deep-purple-900 duration-200 w-64 rounded-b-md' onClick={agregarAlCarrito}>Agregar al Carrito</button>}
             </div>
         </div>
     )
