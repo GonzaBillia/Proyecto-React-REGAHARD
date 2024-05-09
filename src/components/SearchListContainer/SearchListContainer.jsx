@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList'
 import { SearchContext } from '../context/SearchContext'
 import './SearchListContainer.css'
 import { useParams } from 'react-router-dom'
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { collection, getDocs, or, query, where } from 'firebase/firestore'
 import { db } from '../../firebase/config'
 
 const SearchListContainer = () => {
@@ -15,9 +15,9 @@ const SearchListContainer = () => {
 
 useEffect(()=>{
     
-    const {titulo} = busqueda
+    const {search} = busqueda
     //Generar filtrado de productos
-    const misProductos = search ? query(collection(db, "producto"), where("marca","==",titulo)) : collection(db,"producto")
+    const misProductos = search ? collection(db, "producto") : collection(db,"producto")
     
     //Generar documentas solicitados
     getDocs(misProductos)
@@ -26,7 +26,7 @@ useEffect(()=>{
                 const data = doc.data()
                 return {id: doc.id,...data}
             })
-            setProductos(nuevosProductos.filter(producto => producto.marca.includes(titulo)|| producto.modelo.includes(titulo)))
+            setProductos(nuevosProductos.filter(producto => producto.marca.includes(search)|| producto.modelo.includes(search)))
             setProductos(nuevosProductos.sort((a,b)=> a.precio - b.precio))
         })
         .catch((err)=>console.log(err))
