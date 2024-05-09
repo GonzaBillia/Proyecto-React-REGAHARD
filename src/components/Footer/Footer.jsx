@@ -6,8 +6,8 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className='w-full mt-10 border-t-2'>
-            <div className="mx-auto w-full max-w-7xl px-8 flex flex-col">
+        <footer className='relative w-full mt-10 border-t-2'>
+            <div className="mx-auto w-full max-w-7xl px-8 flex flex-col ">
                 <div className='my-8 grid grid-cols-1 flex-col md:grid-cols-2'>
                     <img className='h-4 w-auto' src="https://firebasestorage.googleapis.com/v0/b/proyecto-final-react-cod-c21ca.appspot.com/o/Regahard.png?alt=media&token=733069e8-3744-4ae2-81f1-9f78b8b1d0ce" alt="logo" />
                 </div>

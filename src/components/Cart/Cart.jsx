@@ -15,11 +15,11 @@ const Cart = () => {
 
     return (
 
-        <div className='container mx-auto grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-12 pt-32'>
+        <div className='container mx-auto grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-12 pt-20 lg:pt-32'>
             <div className='cartContainer mx-2 shadow-md rounded-md col-start-1 col-span-7 row-span-full row-start-1'>
                 {cart.length == 0 
                 ?
-                    <div className='col-start-2 col-end-6 row-span-1 row-start-2'>
+                    <div className='col-start-2 col-end-6 row-span-1 row-start-2 min-h-72'>
                         <h2 className='text-3xl m-4'>No hay Productos en el Carrito</h2>
                     </div>
                 :
