@@ -13,6 +13,8 @@ import SearchListContainer from './components/SearchListContainer/SearchListCont
 import MainContainer from './components/MainContainer/MainContainer'
 import SearchProvider from './components/context/SearchContext'
 import Footer from './components/Footer/Footer'
+import MostrarComponente from './components/MostrarComponente/MostrarComponente'
+import AdminContainer from './components/AdminContainer/AdminContainer'
 
 
 
@@ -25,9 +27,9 @@ function App() {
         <CartProvider>
         <SearchProvider>
 
-
-        <NavBar/>
-
+        <MostrarComponente>
+          <NavBar/>
+        </MostrarComponente>
         <Routes>
 
           <Route path='Proyecto-React-REGAHARD/' element={<MainContainer/>}/>
@@ -42,14 +44,18 @@ function App() {
 
           <Route path= 'Proyecto-React-REGAHARD/search/:search' element= {<SearchListContainer/>}/>
 
+          <Route path='Proyecto-React-REGAHARD/admin' element={<AdminContainer/>}/>
+
           <Route path='*' element={<Error/>}/>
 
         </Routes>
 
-        <Footer/>
-
+        <MostrarComponente>
+          <Footer/>
+        </MostrarComponente>
         </SearchProvider>
         </CartProvider>
+
       </BrowserRouter>
     </>
   )
