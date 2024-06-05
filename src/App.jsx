@@ -28,8 +28,9 @@ function App() {
         <SearchProvider>
 
         <MostrarComponente>
-          <NavBar/>
+          
         </MostrarComponente>
+        <NavBar/>
         <Routes>
 
           <Route path='Proyecto-React-REGAHARD/' element={<MainContainer/>}/>
@@ -49,9 +50,9 @@ function App() {
           <Route path='*' element={<Error/>}/>
 
         </Routes>
-
+        <Footer/>
         <MostrarComponente>
-          <Footer/>
+          
         </MostrarComponente>
         </SearchProvider>
         </CartProvider>
